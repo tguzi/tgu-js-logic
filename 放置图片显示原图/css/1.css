@@ -1,0 +1,57 @@
+*{
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	font-family: '微软雅黑';
+}
+.outer{
+	width: 1100px;
+	/*height: 600px;*/
+	/*border: 10px solid #ccc;*/
+	margin:50px auto;
+}
+.title{
+	text-align: center;
+}
+.title h2{
+	color: #D13A3E;
+	line-height: 50px;
+}
+.title p{
+	line-height: 25px;
+}
+.photo{
+	margin-top: 20px;
+}
+.pic{
+	width: 253px;
+	height: 190px;
+	float: left;
+	margin: 5px;
+	padding: 5px;
+	border: 1px solid #ccc;
+	position: relative;
+}
+.picArea{
+	position: absolute;
+	z-index: 2;
+	border: 1px solid red;
+	padding: 5px;
+	background: #fff;
+}
+.imgSize{
+	width: 253px;
+	height: 145px;
+}
+.pic span{
+	display: block;
+	text-align: center;
+	font-weight: bold;
+	font-size: 14px;
+}
+.pic #showPhoto{
+	color: #D13A3E;
+}
+.pic .text-Tips{
+	color: #666;
+}

@@ -1,0 +1,23 @@
+*{
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	font-family: '微软雅黑';
+}
+.map{
+	width: 500px;
+	height: 500px;
+	margin: 20px auto;
+}
+.tell{
+	width: 150px;
+	height: 72px;
+	background: url('../bg.gif');
+	line-height: 70px;
+	display: none;
+	margin-top: -80px;
+	margin-left: -75px;
+	position: absolute;
+	text-align: center;
+	color:blue;
+}

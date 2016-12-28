@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>新闻消息轮播</title>
+	<style>
+		*{
+			margin: 0;
+			padding:0;
+			list-style: none;
+		}
+		.area{
+			width: 500px;
+			height: 25px;
+			line-height: 25px;
+			overflow: hidden;
+			margin-left: 20px;
+			margin-top: 10px;
+		}
+		.time{
+			margin-right: 10px;
+			color: blue;
+		}
+	</style>
+</head>
+<body>
+	<div class="area">
+		<ul id="news">
+			<li>
+				<span class="time"></span>
+				<a href=# target=_blank class="f12red">小泉称若自民党在议会选举中失败</a>
+			</li>
+			<li>
+				<span class="time"></span>
+				<a href=# target=_blank class="f12red"></span>布什发表广播讲话</a>
+			</li>
+			<li>
+				<span class="time"></span>
+				<a href=# target=_blank class="f12red">伊斯兰武装炸毁印控克什米尔铁路导致列车出轨</a>
+			</li>
+			<li>
+				<span class="time"></span>
+				<a href=# target=_blank class="f12red">布雷默：即使抓住了萨达姆也难以结束抵抗行动</a>
+			</li>
+		</ul>
+		<ul id="news1"></ul>
+	</div>
+</body>
+</html>
+<script>
+	(function(){
+		//获取系统时间
+		var n = new Date();
+		var xs = n.getHours();
+		var	fz = n.getMinutes();
+		//获取显示时间的元素
+		var time = document.getElementsByClassName('time');
+		for (var i = 0; i < time.length; i++) {
+			time[i].innerHTML = xs+':'+fz;
+		}
+
+		//获取滚动区域
+		var area = document.getElementsByClassName('area')[0];
+		var uLi = area.getElementsByTagName('li')[0];
+		var news = document.getElementById('news');
+		var news1 = document.getElementById('news1');
+		//克隆一份news节点
+		news1.innerHTML = news.innerHTML;
+		//建立循环
+		var time = setInterval(scrollArea,50);
+		// var time1 =null;
+		//区域滚动函数
+		function scrollArea(){
+			if (area.scrollTop>=news.offsetHeight) {
+				area.scrollTop = 0;
+			}else{
+				area.scrollTop++;
+				if (area.scrollTop%uLi.offsetHeight==0) {
+					clearInterval(time);
+					time = null;
+					//1秒过后继续循环
+					setTimeout(function(){
+						if (time!=null) {
+							return false;
+						}else{
+							time = setInterval(scrollArea,50);
+						}
+					},1000);
+				}
+			}
+		};
+		// console.log(area);
+		//鼠标经过事件
+		area.onmouseover = function(){
+			clearInterval(time);
+			time = null;
+		};
+		area.onmouseleave = function(){
+			if (time!=null) {
+				return false;
+			}else{
+				time = setInterval(scrollArea,50);
+			}
+		};
+
+
+	})();
+</script>

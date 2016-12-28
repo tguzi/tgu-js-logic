@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="../css/1.css">
+</head>
+<body>
+<div id="outer">
+	<div class="main">
+		<!-- 1 -->
+		<div class="one" name="box">
+			<div class="inner">
+				<h1>SCROLLIFY</h1>
+				<p class="tagline">Power steering for your scroll wheel</p>
+				<p>A jQuery plugin that assists scrolling and smoothly snaps to divs.</p>
+				<p>Fully configurable and optimised for touch.</p>
+			</div>
+		</div>
+		<!-- 2 -->
+		<div class="two" name="box">
+			<div class="inner">
+				<h2>Basic Setup</h2>
+				<p>Scrollify requires jQuery 1.6+ and an easing library such as jquery.easing.js.</p>
+				<pre>
+		&lt;! doctype html&gt;
+		&lt;html&gt;
+		&lt;head&gt;
+			&lt;script&gt;
+				$(function() {
+					$.scrollify({
+						div : "div",
+					});
+				});
+			&lt;/script&gt;
+		&lt;/head&gt;
+		&lt;body&gt;
+			&lt;div&gt;&lt;/div&gt;
+			&lt;div&gt;&lt;/div&gt;
+		&lt;/body&gt;
+		&lt;/html&gt;
+				</pre>
+			</div>
+		</div>
+		<!-- 3 -->
+		<div class="three" name="box">
+			<div class="inner">
+			<h2>Configuration</h2>
+				<pre>
+		$.scrollify({
+		div : "div",
+		divName : "div-name",
+		easing: "easeOutExpo",
+		scrollSpeed: 1100,
+		offset : 0,
+		scrollbars: true,
+		before:function() {},
+		after:function() {}
+		});
+				</pre>
+			</div>
+		</div>
+		<div class="four" name="box">
+			<div class="inner">
+				<h2>Options</h2>
+				<dl>
+					<dt>section</dt>
+					<dd>A selector for the divs.</dd>
+					<dt>sectionName</dt>
+					<dd>Scrollify lets you define a hash value for each section. This makes it possible to permalink to particular sections. This is set as a data attribute on the sections. The name of the data attribute is defined by 'divName'.</dd>
+					<dt>easing</dt>
+					<dd>Define the easing method.</dd>
+					<dt>offset</dt>
+					<dd>A distance in pixels to offset each divs position by.</dd>
+					<dt>scrollbars</dt>
+					<dd>A boolean to define whether scroll bars are visible or not.</dd>
+					<dt>before</dt>
+					<dd>A callback that is called before a div is scrolled to via the move method. Arguments include the index of the div and an array of all div elements.</dd>
+					<dt>after</dt>
+					<dd>A callback that is called after a new div is scrolled to. Arguments include the index of the div and an array of all div elements.</dd>
+				</dl>
+			</div>
+		</div>
+		<div class="five" name="box">
+			<div class="inner">
+				<h2>Methods</h2>
+				<p>The move method can be used to scroll to a particular div. This can take the index of the div, or the name of the div preceded by a hash.</p>
+				<pre>
+		$.scrollify("move","#name");
+				</pre>
+		</div>
+	</div>
+</div>
+
+</body>
+</html>
+<script type="text/javascript" src="../js/1.js">
+	
+</script>

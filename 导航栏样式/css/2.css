@@ -1,0 +1,120 @@
+*{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	text-decoration: none;
+	font-family: 微软雅黑;
+}
+.cl{
+	clear: both;
+}
+.outer{
+	position: relative;
+	width: 936px;
+	margin: 80px auto;
+	background: url("../images/nav-main-bg1.png") no-repeat right top;
+	padding-right: 24px;
+}
+.all{
+	width: 912px;
+	height: 52px;
+}
+.firstOut{
+	background: url("../images/nav-main-bg1.png") no-repeat left top;
+}
+.secondOut{
+	margin-left: 24px;
+	background: url("../images/nav-main-bg2.png") repeat right top;
+	cursor: pointer;
+}
+.outer li{
+	float: left;
+	text-align: center;
+	position: relative;
+	width: 113px;
+	height: 52px;
+}
+.inOne{
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	width: 113px;
+	height: 52px;
+	z-index: 10;
+	text-align: center;
+	background: none;
+}
+.inOne a{
+	color: #0C46A5;
+	display: block;
+	padding-top: 5px;
+}
+.inOne a:hover{
+	color: #fff;
+}
+/*鼠标放置时的样式*/
+.on .inOne{
+	top: -8px;
+	height: 68px;
+	text-align: center;
+}
+
+.on .inTwo{
+	background: url("../images/nav-main-current-right.png") no-repeat right center;
+	padding-right: 13px;
+}
+.on .inThree{
+	background: url("../images/nav-main-current-left.png") no-repeat left center;
+	padding-left: 13px;
+}
+
+.on .inFour{
+	background: url("../images/nav-main-current-center.png") repeat-x left center;
+	height: 68px;
+}
+
+
+.on .inOne a{
+	padding-top:12px;
+	color: #fff;
+	font-size: 16px;
+	font-weight: bold;
+	background: none; 
+}
+.on .inOne a:hover{
+	color: #Fff;
+}
+.more{
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	/*margin-top: 43px;*/
+	display: none;
+}
+.more .moreOne{
+	background: url("../images/nav-main-sub-top.png") no-repeat left top;
+	padding-top: 13px;
+}
+.more .moreTwo{
+	background: url("../images/nav-main-sub-bottom.png") no-repeat left bottom;
+	padding-bottom: 13px;
+}
+.more ul{
+	background: url("../images/nav-main-sub-center.png") repeat-y left top;
+	width: 220px;
+	padding-top: 12px;
+	position: relative;
+}
+.more li{
+	padding: 5px 0 0 12px;
+	text-align: left;
+	width: auto;
+	height: auto;
+}
+.more a{
+	padding-left: 20px;
+	color: #fff;
+}
+.more a:hover{
+	background: url("../images/nav-main-sub-item-bg.png") no-repeat left center;
+}

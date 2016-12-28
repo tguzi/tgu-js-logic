@@ -1,0 +1,75 @@
+*{
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	font-family: '微软雅黑';
+}
+body{
+	background: gray;
+	height: 2000px;
+}
+.outer{
+	width: 506px;
+	height: 332px;
+	background: #fff;
+	border: 3px solid #333;
+	margin:100px auto;
+}
+.selectArea{
+	width:320px;
+	height: 42px;
+	background: #c00;
+	margin: 80px auto;
+	padding-left: 10px;
+	position: relative; 
+}
+.selectArea strong{
+	width: 70px;
+	height: 42px;
+	color: #fff;
+	line-height: 42px;
+	display: block;
+	float: left;
+	text-align: center;
+}
+.selectArea .mr{
+	width: 200px;
+	height: 24px;
+	line-height: 24px;
+	border: 1px solid #999;
+	/*background: #FFF url(../images/province_sprites.png) no-repeat 189px -2px;*/
+	display: block;
+	float: left;
+	margin-top: 8px;
+	padding-left:4px;
+	cursor: pointer; 
+}
+.on{
+	color: #ccc;
+	background: #FFF url(../images/province_sprites.png) no-repeat 189px -17px;
+}
+.off{
+	background: #FFF url(../images/province_sprites.png) no-repeat 189px -2px;
+}
+.selectArea .chose{
+	position: absolute;
+	top: 42px;
+	width: 330px;
+	left: 0px;
+	height: 30px;
+	display: none;
+}
+.selectArea li{
+	background: #fff;
+	border: 1px solid #eee;
+	padding: 5px;
+	font-weight: bold;
+	text-indent: 1em;
+}
+.selectArea li .place{
+	margin-left: 20px;
+	cursor: pointer;
+}
+.selectArea li .place:hover{
+	color: #f36;
+}

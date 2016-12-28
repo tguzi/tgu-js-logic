@@ -1,0 +1,46 @@
+*{
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	font-family: '微软雅黑';
+}
+.outer{
+	width: 600px;
+	margin-top: 100px;
+}
+.outer input{
+	width: 400px;
+	height: 30px;
+	line-height: 30px;
+	margin: 5px 0px;
+}
+.outer>span{
+	display: block;
+	font-weight: bold;
+}
+.outer>div{
+	width: 500px;
+	height: 100px;
+	margin:30px auto;
+	position: relative;
+}
+#more{
+	width: 400px;
+	position: absolute;
+	background: #fff;
+	border:1px solid #ccc;
+	z-index: 10;
+	margin-top: -5px;
+	display: none;
+}
+#more li{
+	padding: 5px 10px;
+}
+#more li:hover{
+	background: orange;
+}
+#more span{
+	line-height: 30px;
+	color: #f36;
+}
+

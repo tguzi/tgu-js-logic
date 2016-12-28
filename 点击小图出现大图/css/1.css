@@ -1,0 +1,65 @@
+*{
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	font-family: '微软雅黑';
+	font-size: 10px;
+}
+.Img li{
+	float: left;
+	padding: 5px;
+	margin-top: 5px;
+	width: 150px;
+	text-align: center;
+	cursor: pointer;
+	/*CSS3 过渡*/
+	transition: all 0.3s ease;
+	/*CSS3 曝光*/
+	-webkit-filter:grayscale(100%);
+}
+.Img .include{
+	background: #fff;
+	box-shadow: 0 0 3px #555;
+	padding: 0 5px;
+	position: relative;
+}
+.Img .include img{
+	width: 100%;
+	margin: 5px 0;
+}
+.Img li:hover{
+	-webkit-filter:grayscale(0%);
+}
+.Img .include span{
+	margin: 5px;
+}
+.shadow{
+	position:absolute;
+	left:0;
+	top:0;
+	width:100%;
+	height:1000PX;
+	background:#000;
+	opacity:0.5;
+	/*IE8的透明滤镜*/
+	filter:alpha(opacity=50);
+	display:none;
+}
+.show{
+	width:500px;
+	height:500px;
+	border:1px solid red;
+	background:#fff;
+	position:absolute;
+	left: 0px;
+	top: 0px;
+	display:none;
+}
+.close{
+	color: #fff;
+	position: absolute;
+	right: 20px;
+	top: 20px;
+	cursor: pointer;
+	display: none;
+}

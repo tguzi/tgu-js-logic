@@ -1,0 +1,44 @@
+*{
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+.outer{
+	width: 1001px;
+	margin: 50px auto;
+}
+.show{
+	/*width: 681px;*/
+	float: left;
+}
+.show a{
+	display: block;
+	position: relative;
+	color: #C8C8C8;
+}
+.shadow{
+	height: 50px;
+	width: 100%;
+	background: #000;
+	opacity: 0.6;
+	position: absolute;
+	bottom: 0px;
+	line-height: 50px;
+	text-align: center;
+}
+.show a:hover span{
+	color: #fff;
+}
+.chose{
+	float: right;
+	width: 320px;
+}
+.chose img{
+	border: 1px solid green;
+	display: block;
+	float: left;
+}
+.chose .on{
+	border: 1px solid red;
+}
+

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>消息回复或留言</title>
+	<style>
+		*{margin: 0;padding: 0;list-style:none;}
+		.outer{
+			margin: 20px;
+		}
+		.bioaqing{
+			width: 400px;
+			padding: 5px;
+			cursor: hand;
+		}
+		.bioaqing img{
+			margin: 4px;
+		}
+		.hfArea{
+			max-width: 400px;
+			width: 400px;
+			min-height: 200px;
+			background: #fff;
+			padding: 5px;
+		}
+	</style>
+	<link rel="stylesheet" type="text/css" href="../css/1.css">
+</head>
+<body>
+	<form action="" method="post" class="outer">
+		<span>发布新留言</span>
+		<div class="bioaqing">
+			<img src="" alt="[-_-]">
+			<img src="" alt="[@o@]">
+			<img src="" alt="[-|-]">
+			<img src="" alt="[o_o]">
+			<img src="" alt="[t_t]">
+			<img src="" alt="[-_-!]">
+			<img src="" alt="[-_-!]">
+			<img src="" alt="[:)]">
+			<img src="" alt="[:Z]">
+			<img src="" alt="[-_-]">
+			<img src="" alt="[@o@]">
+			<img src="" alt="[-|-]">
+			<img src="" alt="[o_o]">
+			<img src="" alt="[t_t]">
+			<img src="" alt="[-_-!]">
+			<img src="" alt="[:P]">
+			<img src="" alt="[:)]">
+			<img src="" alt="[:Z]">
+			<img src="" alt="[-_-]">
+			<img src="" alt="[@o@]">
+			<img src="" alt="[-|-]">
+			<img src="" alt="[o_o]">
+			<img src="" alt="[t_t]">
+			<img src="" alt="[-_-!]">
+			<img src="" alt="[:P]">
+			<img src="" alt="[:)]">
+			<img src="" alt="[:Z]">
+			<img src="" alt="[-_-]">
+			<img src="" alt="[@o@]">
+			<img src="" alt="[-|-]">
+			<img src="" alt="[o_o]">
+			<img src="" alt="[t_t]">
+			<img src="" alt="[-_-!]">
+			<img src="" alt="[:P]">
+			<img src="" alt="[:)]">
+			<img src="" alt="[:Z]">
+			<img src="" alt="[-_-]">
+			<img src="" alt="[@o@]">
+			<img src="" alt="[-|-]">
+			<img src="" alt="[o_o]">
+			<img src="" alt="[t_t]">
+			<img src="" alt="[-_-!]">
+			<img src="" alt="[:P]">
+			<img src="" alt="[:)]">
+			<img src="" alt="[:Z]">
+		</div>
+		<div class="huifu">
+			<textarea class="hfArea" name="Text"></textarea>
+		</div>
+		<input type="submit" id="subBtn" value="提交" />
+		<input type="reset" id="resBtn" value="重置">
+	</form>
+	
+</body>
+</html>
+<script type="text/javascript">
+	//获取每个img元素
+	var bioaqing = document.getElementsByClassName('bioaqing')[0];
+	var Img = bioaqing.getElementsByTagName('img');
+	//回复区域
+	var hfArea = document.getElementsByClassName('hfArea')[0];
+
+	//获取两个按钮
+	var subBtn = document.getElementById('subBtn');
+	var retBtn = document.getElementById('resBtn');
+
+	//遍历所有的img元素
+	for (var i = 0; i < Img.length; i++) {
+		//给所有图片插入地址
+		Img[i].src = '../images/'+(i+1)+'.gif';
+		//在输入框中写入表情
+		Img[i].onclick = function(){
+			var newStr = hfArea.value;
+			newStr = newStr + this.alt;
+			hfArea.value = newStr+' ';
+			document.forms[0].Text.focus();
+		};
+
+	}
+</script>

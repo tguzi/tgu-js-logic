@@ -1,0 +1,21 @@
+*{
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+body{
+	background: url('../images/bg.png');
+	height: 10000px;
+}
+.fly{
+	position: fixed;
+	right: 70px;
+	bottom: 100px;
+	width: 110px;
+	height: 160px;
+	cursor: pointer;
+	display: none;
+}
+body .on{
+	display: block;
+}

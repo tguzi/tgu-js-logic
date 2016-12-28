@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="../css/1.css">
+	<style>
+		img{
+			border:none;
+		}
+	</style>
+</head>
+<body>
+	<div class="map">
+		<img usemap="#Map" src="../map.png" alt="China" />
+		<map name="Map" id="Map">
+			<area id="beijing" alt="北京" href="" coords="354,140,380,153" shape="rect">
+		    <area id="shanghai" alt="上海" href="" coords="434,246,462,259" shape="rect">
+		    <area id="tianjin" alt="天津" href="" coords="382,168,408,180" shape="rect">
+		    <area id="chongqing" alt="重庆" href="" coords="294,264,320,276" shape="rect">
+		    <area id="hebei" alt="河北" href="" coords="347,174,374,186" shape="rect">
+		    <area id="shanxi" alt="山西"  href="" coords="322,186,348,198" shape="rect">
+		    <area id="neimenggu" alt="内蒙古" href="" coords="349,110,388,124" shape="rect">
+		    <area id="liaoning" alt="辽宁" href="" coords="406,128,432,140" shape="rect">
+		    <area id="jilin" alt="吉林" href="" coords="427,101,454,115" shape="rect">
+		    <area id="heilongjiang" alt="黑龙江" href="" coords="424,58,464,73" shape="rect">
+		    <area id="jiangsu" alt="江苏" href="" coords="404,224,417,250" shape="rect">
+		    <area id="zhejiang" alt="浙江" href="" coords="413,265,427,291" shape="rect">
+		    <area id="anhui" alt="安徽" href="" coords="382,236,395,263" shape="rect">
+		    <area id="fujian" alt="福建" href="" coords="399,300,413,327" shape="rect">
+		    <area id="jiangxi" alt="江西" href="" coords="371,286,385,313" shape="rect">
+		    <area id="shandong" alt="山东" href="" coords="373,196,399,208" shape="rect">
+		    <area id="henan" alt="河南" href="" coords="337,228,364,239" shape="rect">
+		    <area id="hubei" alt="湖北" href="" coords="329,258,356,271" shape="rect">
+		    <area id="hunan" alt="湖南" href="" coords="325,294,352,306" shape="rect">
+		    <area id="guangdong" alt="广东" href="" coords="356,343,382,355" shape="rect">
+		    <area id="guangxi" alt="广西" href="" coords="302,343,328,355" shape="rect">
+		    <area id="hainan" alt="海南" href="" coords="313,398,340,411" shape="rect">
+		    <area id="sichuan" alt="四川" href="" coords="239,265,265,277" shape="rect">
+		    <area id="guizhou" alt="贵州" href="" coords="283,311,308,324" shape="rect">
+		    <area id="yunnan" alt="云南" href="" coords="225,337,251,349" shape="rect">
+		    <area id="shaanxi" alt="陕西" href="" coords="303,224,316,251" shape="rect">
+		    <area id="gansu" alt="甘肃" href="" coords="179,156,205,168" shape="rect">
+		    <area id="qinghai" alt="青海" href="" coords="174,206,200,218" shape="rect">
+		    <area id="ningxia" alt="宁夏" href="" coords="277,188,290,212" shape="rect">
+		    <area id="xinjiang" alt="新疆" href="" coords="85,140,111,152" shape="rect">
+		    <area id="xizang" alt="西藏" href="" coords="87,249,113,261" shape="rect">
+		    <area id="xianggang" alt="香港" href="" coords="379,358,406,370" shape="rect">
+		    <area id="aomen" alt="澳门" href="" coords="349,371,375,383" shape="rect">
+		    <area id="taiwan" alt="台湾" href="" coords="434,322,448,348" shape="rect">
+		</map>
+
+		<div class="tell" id="tell">
+			
+		</div>
+	</div>
+</body>
+</html>
+<script type="text/javascript">
+	(function(){
+		//获取元素
+		var tell = document.getElementById('tell');
+		var area = document.getElementsByTagName('area');
+		for (var i = 0; i < area.length; i++) {
+			area[i].count = i;
+			//鼠标经过区域的时候显示提示消息
+			area[i].onmousemove = function(){
+				hint(tell,'提示消息:'+area[this.count].alt+''+this.count+'');
+			}
+			//鼠标离开事件
+			area[i].onmouseout = function(){
+				tell.style.display = 'none';
+			};
+		};
+		// 调用格式 parseInt(getStyle(要寻找的对象,'需要改变值的属性'));
+		function getStyle(obj, attr){
+			if(obj.currentStyle){
+			  return obj.currentStyle[attr];
+			}else{
+			  return getComputedStyle(obj, false)[attr];
+		    }
+		};
+
+		// 在当前位置出现提示消息
+		//调用格式 hint(显示提示消息的元素,提示信息字符串);
+		function hint(obj1,str){
+			//显示提示框
+			obj1.style.display = 'block';
+			obj1.innerHTML = str;
+			//获取鼠标的坐标
+			var X = event.layerX?event.layerX:event.offsetX;
+			var Y = event.layerY?event.layerY:event.offsetY;
+			// 把坐标值赋给消息提示框
+			obj1.style.left = X + 'px';
+			obj1.style.top = Y + 'px';
+		};
+
+	})();
+	
+</script>

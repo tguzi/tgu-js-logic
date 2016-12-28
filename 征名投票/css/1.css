@@ -1,0 +1,81 @@
+*{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	font-family: 微软雅黑;
+}
+body{
+	background: red;
+}
+/*设置最外面的盒子的宽高*/
+.outer{
+	width: 840px;
+	/*border: 5px solid red;*/
+	/*background: red;*/
+	margin: 20px auto;
+}
+/*统一样式*/
+.box{
+	width: 200px;
+	height: 200px;
+	float: left;
+	margin: 5px;
+	position: relative;
+	overflow: hidden;
+}
+.zhengming{
+	/*width: 200px;*/
+	height: 160px;
+	background: url('../image/votebb.png');
+	border-bottom: 1px solid #ccc;
+	text-align: center;
+}
+.zhengming h2{
+	text-align: center;
+    line-height: 100px;
+    font-size: 23px;
+    font-weight: 700;  
+    color: #474747;
+}
+.toupiao{
+	width: 200px;
+	height: 40px;
+	background:#fff;
+	font-weight: bold;	
+}
+.pianshu{
+	float: left;
+	width: 80px;
+	/*height: 40px;*/
+	color: #CC0000;
+	line-height: 40px;
+	margin-left: 10px;
+}
+.tpBtn{
+	width: 50px;
+	float: right;
+	/*height: 30px;*/
+	line-height: 30px;
+	text-align: center;
+	background: #FF4040;
+	margin: 5px 10px;
+	cursor: pointer;
+	color: #fff;
+}
+/*遮罩层样式*/
+.shadow{
+	width: 100%;
+	height: 160px;
+	background: #000;
+	opacity: 0.8;
+	position: absolute;
+	top: -200px;
+	left: 0px;
+	cursor: pointer;
+}
+.shadow span{
+	color: #fff;
+	line-height: 50px;
+	font-size: 12px;
+}
+
